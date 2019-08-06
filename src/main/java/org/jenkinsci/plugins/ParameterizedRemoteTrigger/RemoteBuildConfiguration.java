@@ -838,7 +838,7 @@ public class RemoteBuildConfiguration extends Builder implements SimpleBuildStep
 		}
 
 		// Only avoid url cache while loop inquiry
-		String buildUrlString = String.format("%sapi/json/?seed=%d", buildInfo.getBuildURL(),
+		String buildUrlString = String.format("%sapi/json/?tree=result&seed=%d", buildInfo.getBuildURL(),
 				System.currentTimeMillis());
 		JSONObject responseObject = doGet(buildUrlString, context).getBody();
 
